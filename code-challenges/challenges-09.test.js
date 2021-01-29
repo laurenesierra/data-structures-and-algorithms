@@ -158,7 +158,7 @@ const currentEvents = {
       url: "https://bgr.com/2020/04/13/coronavirus-mask-effectiveness-surgical-how-to/"
     }
   ]
-}
+};
 
 function getCurrentEvents(request, response) {
   response.send(mapCurrentEvents());
@@ -188,8 +188,13 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  // Solution code here...
+  let valueCounter = arr.reduce((counter) => {
+    counter++;
+    return counter;
+  }, 0);
+  return valueCounter;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -249,7 +254,11 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  // Solution code here...
+  return arr.reduce((finalArray, person) => {
+    finalArray.push(person.name);
+    return finalArray;
+  }, []);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -261,8 +270,13 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  // Solution code here...
+  const array = str.split('');
+  const reverseString = array.reduce((reversed, character) => {
+    return character + reversed;
+  }, '');
+  return reverseString;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
