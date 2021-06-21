@@ -82,3 +82,5 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 [Array-Reverse](code_challenges/array-reverse/README.md)
 
 [Array-Binary-Search](code_challenges/array-binary-search/README.md)
+
+[linked_list](linked_list/linked_list.py/README.md)
